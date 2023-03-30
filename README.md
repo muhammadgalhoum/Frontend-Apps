@@ -1,2 +1,3 @@
 # Frontend-Apps
-Beautiful Apps in the Frontend field
+
+Beautiful and Simple Apps in the Frontend field.

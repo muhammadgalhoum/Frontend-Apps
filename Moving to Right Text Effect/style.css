@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #333;
+}
+.link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 220px;
+  height: 60px;
+  color: #8bc34a;
+  margin: 20px auto;
+  line-height: 55px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #8bc34a;
+}
+.link::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.link span {
+  display: block;
+  transition: 0.3s;
+}
+.link:hover::before {
+  transform: translateX(0);
+}
+.link:hover span {
+  transform: translateX(100%);
+}

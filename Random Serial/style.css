@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #FAFAFE;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #4DA8D5;
+}
+.container .serialDiv {
+  position: relative;
+}
+.container .serialDiv::before {
+  content: attr(data-content);
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  width: 100px;
+  height: 20px;
+  padding: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #795548;
+}
+.container .serialDiv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 55px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  border: 10px solid transparent;
+  border-top-color: #795548;
+}
+.container .serialDiv input[type='text'] {
+  height: 38px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  background-color: #FAFAFE;
+}
+.container .serialDiv:hover::before,
+.container .serialDiv:hover::after {
+  opacity: 1;
+}
+.container div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+}
+.container input[type='number'] {
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+.container input[type='number']:focus {
+  outline-color: #664EEF;
+}
+.container button {
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  color: #2A252B;
+  border-radius: 3px;
+  user-select: none;
+  font-weight: bold;
+}
+p {
+  color: #D7032A;
+  text-align: center;
+}

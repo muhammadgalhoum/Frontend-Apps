@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+.product {
+  width: 375px;
+  padding: 15px;
+  overflow: hidden;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 0 10px #ddd;
+}
+.product .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.6s;
+  border-radius: 50%;
+  background-color: #009688;
+}
+.product h3 {
+  margin: 15px 0;
+  font-size: 26px;
+  transition: 0.6s;
+}
+.product p {
+  font-size: 18px;
+  line-height: 1.6;
+  transition: 0.6s;
+}
+.product:hover .number {
+  box-shadow: 0 0 0 400px #009688;
+}
+.product:hover h3,
+.product:hover p{
+  color: white;
+}

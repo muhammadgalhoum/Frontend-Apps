@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+.fill {
+  position: relative;
+  margin: 20px auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px #333;
+}
+.fill::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-fill-color: #ff5722;
+}
+.fill:hover::before {
+  width: 100%;
+}

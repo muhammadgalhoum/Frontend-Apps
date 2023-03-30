@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tabs li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 2px 2px 2px 0;
+  background-color: #ecececab;
+}
+.tabs li:first-child {
+  border-left: 2px solid #ccc;
+}
+.tabs li.active {
+  color: #03a9f4;
+  background-color: #f7f4f4;
+  border-top: 2px solid #03a9f4;
+  border-bottom-color: #f7f4f4;
+}
+.content {
+  width: 500px;
+  background-color: #f7f4f4;
+}
+.content > div {
+  display: none;
+  padding: 15px;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: #ccc;
+}
+.content > div.active {
+  display: block;
+}
